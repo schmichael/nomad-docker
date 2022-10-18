@@ -6,6 +6,5 @@ ENV CGO_ENABLED=1
 RUN git clone https://github.com/hashicorp/nomad.git /nomad && \
   cd /nomad && \
   make bootstrap && \
-  npm i -g corepack && \
   make prerelease
 RUN cd /nomad && make dev-ui
